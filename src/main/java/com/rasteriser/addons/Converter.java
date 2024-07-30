@@ -52,21 +52,7 @@ public class Converter {
                     image.setRGB(x, y, rgb);
                 }
             }
-        } else {
-            fis.read();
-            byte[] pixelData = new byte[3];
-            for (int y = 0; y < height; y++) {
-                for (int x = 0; x < width; x++) {
-                    fis.read(pixelData);
-                    int r = (pixelData[0] & 0xFF) * 255 / maxColor;
-                    int g = (pixelData[1] & 0xFF) * 255 / maxColor;
-                    int b = (pixelData[2] & 0xFF) * 255 / maxColor;
-                    int rgb = (r << 16) | (g << 8) | b;
-                    image.setRGB(x, y, rgb);
-                }
-            }
         }
-
         scanner.close();
         fis.close();
         return image;
