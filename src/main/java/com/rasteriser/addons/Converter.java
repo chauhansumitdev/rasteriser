@@ -20,7 +20,7 @@ public class Converter {
 
         try {
             BufferedImage image = readPPM(inputFileName);
-            ImageIO.write(image, "jpg", new File(outputFileName));
+            ImageIO.write(image, "png", new File(outputFileName));
             System.out.println("Success: " + outputFileName);
         } catch (IOException e) {
             e.printStackTrace();

@@ -8,8 +8,8 @@ import com.rasteriser.core.Color;
 
 public class Image {
 
-    int cols;
-    int rows;
+    int cols;  // x axis
+    int rows;   // y axix
 
     int[][][] image;
 
@@ -28,9 +28,11 @@ public class Image {
         int green = (int) Math.round(Math.max(Math.min(yCurr * 256, 255), 0));
         int blue = (int) Math.round(Math.max(Math.min(zCurr * 256, 255), 0));
 
-        image[x][y][0] = red;
-        image[x][y][1] = green;
-        image[x][y][2] = blue;
+        y  = (rows-1) - y;
+
+        image[y][x][0] = red;
+        image[y][x][1] = green;
+        image[y][x][2] = blue;
     }
 
     public void createFile(String fileName) {
