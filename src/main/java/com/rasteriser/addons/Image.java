@@ -8,8 +8,8 @@ import com.rasteriser.core.Color;
 
 public class Image {
 
-    int cols;  // x axis
-    int rows;   // y axix
+    public int cols;  // x axis
+    public int rows;   // y axix
 
     int[][][] image;
 

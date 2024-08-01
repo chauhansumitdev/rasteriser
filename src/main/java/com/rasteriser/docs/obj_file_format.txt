@@ -1,0 +1,17 @@
+.obj file format
+
+
+each line represents the data it contains
+
+type of data it contains:
+
+v - vertex coord
+vt - texture coord
+vn - vertex normal
+f - face using a series of vertex, texture coordinates and normal data
+
+
+check models/cube.obj for values and how the data is organised
+
+and more importantly the indexing in the file is 1 based this should be known before hand because i would come handy at
+the time of reading the file.
